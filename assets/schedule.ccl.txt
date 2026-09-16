@@ -1,0 +1,21 @@
+# Schedule definitions for thorn Kruskal
+# $Header$
+
+
+
+if (calculate_Schwarzschild_radius)
+{
+  STORAGE: Schwarzschild_radius
+}
+
+
+
+if (CCTK_EQUALS (initial_lapse, "Kruskal")
+    || CCTK_EQUALS (initial_shift, "Kruskal")
+    || CCTK_EQUALS (initial_data, "Kruskal"))
+{
+  SCHEDULE Kruskal_InitialData IN ADMBase_InitialData
+  {
+    LANG: Fortran
+  } "Set up Kruskal initial data"
+}
