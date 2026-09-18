@@ -3,11 +3,11 @@
 The wiki pages live in this repository's [wiki](https://github.com/EinsteinToolkit/wiki/wiki),
 imported from the former MediaWiki at <https://docs.einsteintoolkit.org/et-docs/>.
 
-## `assets/`
+Images and other attachments are stored in `assets/` in the wiki git
+repository, not in this repo. Clone that with:
 
-Images and file attachments used by the wiki pages. GitHub wikis have no file-upload
-area of their own, so wiki pages reference these files by raw URL:
+    git clone git@github.com:EinsteinToolkit/wiki.wiki.git
 
-    ![caption](https://raw.githubusercontent.com/EinsteinToolkit/wiki/main/assets/NAME)
+Then add files under `assets/` and reference them from wiki pages as:
 
-To add a new image, commit it to `assets/` here and reference it the same way.
+    https://raw.githubusercontent.com/wiki/EinsteinToolkit/wiki/assets/NAME
